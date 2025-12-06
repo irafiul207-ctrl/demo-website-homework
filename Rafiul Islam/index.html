@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RafiSpace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS (REQUIRED FOR CAROUSEL) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #bdceec;
+            color: #222;
+        }
+
+        /* NAVBAR */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #754ce6;
+            color: white;
+            padding: 15px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #9bc3d4;
+        }
+
+        /* LOGIN BUTTON */
+        .login-btn {
+            margin-left: 30px;
+            padding: 8px 18px;
+            background: #ffffff;
+            color: #754ce6;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #0f172a;
+            color: white;
+        }
+
+        main {
+            padding-top: 70px;
+        }
+
+        /* CAROUSEL IMAGE HEIGHT FIX */
+        .carousel-item img {
+            height: 350px;
+            object-fit: cover;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(to right, #662f68, #5570af);
+            color: white;
+            padding: 80px 60px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        section {
+            padding: 60px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            line-height: 1.7;
+        }
+
+        .services {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(6px);
+            padding: 30px;
+            border-radius: 15px;
+            flex: 1;
+            min-width: 260px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h4 {
+            margin-bottom: 10px;
+            color: #2e65e7;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #754ce6;
+            color: white;
+            text-align: center;
+            padding: 12px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            small nav {
+                flex-wrap: wrap;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .services {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <h1>RafiSpace</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ✅ CAROUSEL (YOUR CODE ADDED HERE) -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="c1.jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="c2.jpg" class="d-block w-100" alt="Slide 2">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="c3.jpg" class="d-block w-100" alt="Slide 3">
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+
+        <!-- HERO -->
+        <div class="hero">
+            <h2>Build Your Future With Confidence</h2>
+            <p>
+                RafiSpace is a modern platform designed for growth, creativity,
+                and digital professionalism. Join the journey today.
+            </p>
+        </div>
+
+        <!-- ABOUT -->
+        <section class="about">
+            <h3>About Us</h3>
+            <p>
+                We provide professional web, learning, and creative solutions
+                for individuals who want to grow in the digital world.
+                This platform is dedicated to empowering beginners and young creators.
+            </p>
+        </section>
+
+        <!-- SERVICES -->
+        <section>
+            <h3>Our Services</h3>
+
+            <div class="services">
+                <div class="card">
+                    <h4>Web Development</h4>
+                    <p>Professional and clean website design using modern technologies.</p>
+                </div>
+
+                <div class="card">
+                    <h4>Learning Support</h4>
+                    <p>We provide guidance on HTML, CSS, SEO, and content creation.</p>
+                </div>
+
+                <div class="card">
+                    <h4>Creative Branding</h4>
+                    <p>Build your personal identity and brand in the digital world.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 RafiSpace — All Rights Reserved
+    </footer>
+    <div class="footer py-5"></div>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
